@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SpotifyClone';
+
+  songs = [
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+    {songNamg:'abcd',singer:'abcd pro',duration:'4:20',play:true,img:''},
+  ]
 }

@@ -26,13 +26,38 @@
   </div>
 </nav>
 
+<main class="row" style="margin:14px;">
+  <div class="main col-sm-3" style="margin:0;" *ngFor="let song of songs">
+    <div class="loader">
+      <div class="song">
+        <p class="name">{{song.songNamg}}</p>
+        <p class="artist">{{song.singer}}</p>
+      </div>
+      <div class="albumcover">
+        <img src="" alt="">
+      </div>
+      <div class="loading" *ngIf="song.play">
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+        <div class="load"></div>
+      </div>
+      <div class="loading" *ngIf="!song.play">
+        <i class='bx bx-play-circle bx-flip-horizontal' ></i>      </div>
+    </div>
+  </div>
+ 
+</main>
 
 <nav class="navbar fixed-bottom navbar-light bg-dark justify-content-center align-items-center">
-  
-  <div class="d-flex justify-content-center">
-    <div class="p-2" style="color: #fff;"><i class='bx bx-skip-previous'></i></div>
-    <div class="p-2" style="color: #fff;"><i class='bx bx-pause' style='color:#ffffff'></i></div>
-    <div class="p-2" style="color: #fff;"><i class='bx bx-play'></i></div>
-    <div class="p-2" style="color: #fff;"><i class='bx bx-skip-next' style='color:#ffffff'></i></div>
+  <div class="d-flex flex-column align-items-center">
+    <label for="customRange1" class="form-label">Example range</label>
+    <input type="range" class="form-range" id="customRange1"min="0" max="100" style="width: 80vw;">
+    <div class="d-flex justify-content-center">
+      <div class="p-2" style="color: #fff;"><i class='bx bx-skip-previous'></i></div>
+      <div class="p-2" style="color: #fff;"><i class='bx bx-pause' style='color:#ffffff'></i></div>
+      <div class="p-2" style="color: #fff;"><i class='bx bx-play'></i></div>
+      <div class="p-2" style="color: #fff;"><i class='bx bx-skip-next' style='color:#ffffff'></i></div>
+    </div>
   </div>
 </nav>
