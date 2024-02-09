@@ -1,4 +1,4 @@
-<nav class="navbar bg-dark navbar-expand-lg fixed-top">
+<nav class="navbar bg-dark navbar-expand-lg sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"> <i class='bx bxl-spotify' style='color:#1ed760;font-size: 49px; '></i> </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -26,11 +26,11 @@
   </div>
 </nav>
 
-<main class="row" style="margin:14px;">
-  <div class="main col-sm-3" style="margin:0;" *ngFor="let song of songs">
+<main class="row" style="margin: auto;">
+  <div class="main col-sm-3" style="margin-top: 4vh;" *ngFor="let song of songs">
     <div class="loader">
       <div class="song">
-        <p class="name">{{song.songNamg}}</p>
+        <p class="name">{{song.songname}}</p>
         <p class="artist">{{song.singer}}</p>
       </div>
       <div class="albumcover">
@@ -43,21 +43,22 @@
         <div class="load"></div>
       </div>
       <div class="loading" *ngIf="!song.play">
-        <i class='bx bx-play-circle bx-flip-horizontal' ></i>      </div>
+        <i class='bx bx-play-circle bx-flip-horizontal'></i>
+      </div>
     </div>
   </div>
- 
+
 </main>
 
 <nav class="navbar fixed-bottom navbar-light bg-dark justify-content-center align-items-center">
   <div class="d-flex flex-column align-items-center">
     <label for="customRange1" class="form-label">Example range</label>
-    <input type="range" class="form-range" id="customRange1"min="0" max="100" style="width: 80vw;">
+    <input type="range" class="form-range" id="customRange1" min="0" value="0" max="100" style="width: 80vw;">
     <div class="d-flex justify-content-center">
-      <div class="p-2" style="color: #fff;"><i class='bx bx-skip-previous'></i></div>
-      <div class="p-2" style="color: #fff;"><i class='bx bx-pause' style='color:#ffffff'></i></div>
-      <div class="p-2" style="color: #fff;"><i class='bx bx-play'></i></div>
-      <div class="p-2" style="color: #fff;"><i class='bx bx-skip-next' style='color:#ffffff'></i></div>
+      <div class="p-2" type="button" style="color: #fff;"><i class='bx bx-skip-previous'></i></div>
+      <div class="p-2" type="button" style="color: #fff;" *ngIf="!audio.paused"><i class='bx bx-pause' style='color:#ffffff' (click)="playpause()"></i></div>
+      <div class="p-2" type="button" style="color: #fff;" *ngIf="audio.paused"><i class='bx bx-play' (click)="playpause()"></i></div>
+      <div class="p-2" type="button" style="color: #fff;"><i class='bx bx-skip-next' style='color:#ffffff'></i></div>
     </div>
   </div>
 </nav>
